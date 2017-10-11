@@ -26,8 +26,8 @@ import com.google.template.soy.jssrc.dsl.GoogRequire;
  */
 final class IncrementalDomRuntime {
   private static final GoogRequire INCREMENTAL_DOM =
-      GoogRequire.createWithAlias("incrementaldom", "incrementalDom");
-  static final GoogRequire SOY_IDOM = GoogRequire.createWithAlias("soy.idom", "soyIdom");
+      GoogRequire.create("incrementaldom");
+  static final GoogRequire SOY_IDOM = GoogRequire.create("soy.idom");
 
   public static final CodeChunk.WithValue INCREMENTAL_DOM_ELEMENT_OPEN =
       INCREMENTAL_DOM.dotAccess("elementOpen");

@@ -33,17 +33,14 @@ public final class SoyIncrementalDomSrcOptions {
   SoyJsSrcOptions toJsSrcOptions() {
     SoyJsSrcOptions jsSrcOptions = new SoyJsSrcOptions();
     jsSrcOptions.setShouldAllowDeprecatedSyntax(false);
-    jsSrcOptions.setShouldProvideRequireSoyNamespaces(false);
+    jsSrcOptions.setShouldProvideRequireSoyNamespaces(true);
     jsSrcOptions.setShouldProvideRequireJsFunctions(false);
     jsSrcOptions.setShouldProvideBothSoyNamespacesAndJsFunctions(false);
-    jsSrcOptions.setShouldDeclareTopLevelNamespaces(false);
     jsSrcOptions.setShouldGenerateJsdoc(true);
-    // Only goog.module generation supported
-    jsSrcOptions.setShouldGenerateGoogModules(true);
+    jsSrcOptions.setShouldGenerateGoogModules(false);
     jsSrcOptions.setShouldGenerateGoogMsgDefs(true);
     jsSrcOptions.setGoogMsgsAreExternal(true);
     jsSrcOptions.setBidiGlobalDir(0);
-    jsSrcOptions.setUseGoogIsRtlForBidiGlobalDir(true);
     return jsSrcOptions;
   }
 
